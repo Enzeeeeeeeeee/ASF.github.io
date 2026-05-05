@@ -275,19 +275,20 @@
             <!-- Logo (klickt zur Home Page) -->
             <a onclick="showPage('home')" class="flex items-center gap-3 group cursor-pointer">
                 <!-- HIER DEIN LOGO - Einfach URL unten austauschen! -->
-                <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/image.png" alt="ASF Logo" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+                <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/logo.png" alt="ASF Logo" class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
                 <span class="font-display font-bold text-lg text-gray-900 hidden sm:block">ASF e.V.</span>
             </a>
             
             <!-- Desktop Menu - Alle Links funktionieren jetzt! -->
             <div class="hidden md:flex items-center gap-8">
-                <a onclick="showPage('home')" class="nav-link-light active">Home</a>
-                <a href="#about" class="nav-link-light">Über uns</a>
-                <a href="#benefits" class="nav-link-light">Vorteile</a>
-                <a onclick="showPage('academy')" class="nav-link-light">Academy</a>
-                <a href="#events" class="nav-link-light">Events</a>
-                <a href="#team" class="nav-link-light">Team</a>
-                <a href="#wikifolio" class="nav-link-light">Portfolio</a>
+                <a onclick="showPage('home')" href="#homePage" class="nav-link-light active">Home</a>
+                <a onclick="showPage('home')" href="#about" class="nav-link-light">Über uns</a>
+                <a onclick="showPage('home')" href="#community" class="nav-link-light">Community</a>
+				<a onclick="showPage('home')" href="#bvh" class="nav-link-light">Die BVH</a>
+                <a onclick="showPage('home')" href="#events" class="nav-link-light">Events</a>
+                <a onclick="showPage('home')" href="#team" class="nav-link-light">Team</a>
+                <a onclick="showPage('home')" href="#wikifolio" class="nav-link-light">Portfolio</a>
+				<a onclick="showPage('academy')" class="nav-link-light active">Academy</a>
                 <button onclick="openModal('membershipModal')" class="btn-primary-new px-6 py-2.5 rounded-full text-sm font-semibold cursor-pointer">Mitglied werden</button>
             </div>
             
@@ -307,11 +308,12 @@
     <div class="mt-12 flex flex-col gap-6">
         <a onclick="showPage('home'); closeMobileMenu();" class="text-lg font-medium text-gray-900 hover:text-asf-navy cursor-pointer">Home</a>
         <a href="#about" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Über uns</a>
-        <a href="#benefits" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Vorteile</a>
-        <a onclick="showPage('academy'); closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Academy</a>
+        <a href="#community" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Community</a>
+		<a href="#bvh" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Die BVH</a>
         <a href="#events" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Events</a>
         <a href="#team" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Team</a>
         <a href="#wikifolio" onclick="closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Portfolio</a>
+		<a onclick="showPage('academy'); closeMobileMenu();" class="text-lg font-medium text-gray-700 hover:text-asf-navy cursor-pointer">Academy</a>
         <button onclick="openModal('membershipModal'); closeMobileMenu();" class="btn-primary-new w-full py-3 rounded-xl text-white font-semibold mt-4 cursor-pointer">Mitglied werden</button>
     </div>
 </div>
@@ -368,7 +370,7 @@
                         <button onclick="openModal('membershipModal')" class="btn-primary-new px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 cursor-pointer">
                             <i class="fas fa-arrow-right"></i> Jetzt Mitglied werden
                         </button>
-                        <a href="#benefits" class="btn-secondary-new px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2">Mehr erfahren</a>
+                        <a href="#community" class="btn-secondary-new px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2">Mehr erfahren</a>
                     </div>
                     
                     <!-- Quick Features -->
@@ -376,6 +378,7 @@
                         <span class="feature-pill px-4 py-2 rounded-full text-sm font-medium text-gray-700 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> BVH Zugang</span>
                         <span class="feature-pill px-4 py-2 rounded-full text-sm font-medium text-gray-700 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Exklusive Events</span>
                         <span class="feature-pill px-4 py-2 rounded-full text-sm font-medium text-gray-700 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> ASF Academy</span>
+						<span class="feature-pill px-4 py-2 rounded-full text-sm font-medium text-gray-700 flex items-center gap-2"><i class="fas fa-check-circle text-green-500"></i> Netzwerk & Community</span>
                         <span class="feature-pill px-4 py-2 rounded-full text-sm font-medium text-gray-700 flex items-center gap-2"><i class="fas fa-chart-line text-asf-purple"></i> wikifolio Portfolio</span>
                     </div>
                 </div>
@@ -386,7 +389,7 @@
                         <div class="logo-ring"></div><div class="logo-ring"></div><div class="logo-ring"></div>
                         
                         <!-- LOGO BILD - Hier ist deine URL! -->
-                        <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/image.png" 
+                        <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/logo.png" 
                              alt="ASF Academic Society of Finance Logo" 
                              class="logo-main w-56 h-56 md:w-72 md:h-72 object-contain">
                         
@@ -397,6 +400,16 @@
                                 <div><div class="text-xs font-bold text-gray-900">200+</div><div class="text-[10px] text-gray-500">Mitglieder</div></div>
                             </div>
                         </div>
+						
+						
+						<div class="absolute -top-[-10%] -left-2 md:-left-12 bg-white rounded-2xl shadow-lg p-3 z-20 animate-bounce" style="animation-duration: 2s;">
+							<div class="flex items-center gap-2">
+								<div class="w-8 h-8 bg-asf-red/10 rounded-lg flex items-center justify-center"><i class="fas fa-microphone text-asf-red text-sm"></i></div>
+								<div><div class="text-xs font-bold text-gray-900">Vor Ort</div><div class="text-[10px] text-gray-500">Vorträge & Talks</div></div>
+							</div>
+						</div>
+						
+						
                         
                         <div class="absolute -bottom-2 -left-2 md:-left-8 bg-white rounded-2xl shadow-lg p-3 z-20 animate-bounce" style="animation-duration: 4s;">
                             <div class="flex items-center gap-2">
@@ -515,26 +528,26 @@
             <div class="flex flex-col items-center gap-4 max-w-4xl mx-auto reveal">
                 
                 <!-- Level 4: Network (Top) -->
-                <div class="pyramid-level w-full max-w-md bg-gradient-to-r from-indigo-300 to-indigo-400 rounded-t-3xl px-8 py-6 text-center cursor-pointer">
+                <div class="pyramid-level w-full max-w-[16rem] bg-gradient-to-b from-indigo-300 to-indigo-400 rounded-t-3xl rounded-b-3xl px-8 py-6 text-center cursor-pointer">
                     <h4 class="font-display font-bold text-white text-xl mb-1">Network</h4>
                     <p class="text-indigo-100 text-sm">Kontakte knüpfen & pflegen</p>
                 </div>
                 
                 <!-- Level 3: BVH -->
-                <div class="pyramid-level w-full max-w-lg bg-gradient-to-r from-asf-blue to-blue-600 px-8 py-6 text-center">
+                <div class="pyramid-level w-full max-w-sm bg-gradient-to-b from-indigo-400 to-blue-600 rounded-t-3xl rounded-b-3xl px-8 py-6 text-center">
                     <h4 class="font-display font-bold text-white text-xl mb-1">BVH Vorteile</h4>
                     <p class="text-blue-100 text-sm">Kurse + Finanzzeitschriften (6+) + Events</p>
                 </div>
                 
                 <!-- Level 2: Events -->
-                <div class="pyramid-level w-full max-w-2xl bg-gradient-to-r from-blue-700 to-asf-blue-dark px-8 py-6 text-center">
+                <div class="pyramid-level w-full max-w-xl bg-gradient-to-b from-blue-600 to-asf-blue rounded-t-3xl rounded-b-3xl px-8 py-6 text-center">
                     <h4 class="font-display font-bold text-white text-xl mb-1">Events</h4>
                     <p class="text-blue-200 text-sm">Speaker Vorträge + Talks + regelmäßiger Stammtisch</p>
                 </div>
                 
                 <!-- Level 1: Taskforces (Bottom) -->
-                <div class="pyramid-level w-full max-w-3xl bg-gradient-to-r from-slate-800 to-slate-900 rounded-b-3xl px-8 py-8 text-center">
-                    <h4 class="font-display font-bold text-white text-2xl mb-2">Taskforces</h4>
+                <div class="pyramid-level w-full max-w-3xl bg-gradient-to-b from-asf-blue to-slate-900 rounded-t-3xl rounded-b-3xl px-8 py-6 text-center">
+                    <h4 class="font-display font-bold text-white text-xl mb-1">Taskforces</h4>
                     <p class="text-slate-300">Get involved! Shape the future of a rising club @ DHBW</p>
                 </div>
             </div>
@@ -596,12 +609,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur px-6 py-3 rounded-full mb-6">
-                    <i class="fas fa-building-columns text-2xl"></i>
-                    <span class="font-semibold">Bundesverband der Börsenvereine an deutschen Hochschulen e.V.</span>
-                </div>
+                <a href="https://bvh.org/homepage/" target="_blank" rel="noopener noreferrer" 
+				   class="inline-flex items-center gap-3 bg-white/10 backdrop-blur px-6 py-3 rounded-full mb-6 
+						  hover:bg-white/20 transition-colors cursor-pointer text-white no-underline">
+					<i class="fas fa-building-columns text-2xl"></i>
+					<span class="font-semibold">Bundesverband der Börsenvereine an deutschen Hochschulen e.V.</span>
+				</a>
                 <h2 class="font-display text-3xl md:text-5xl font-bold mb-6">Unser Dachverband: Der BVH</h2>
-                <p class="text-lg text-blue-200">Als ASF-Mitglied profitierst du vom gesamten BVH-Netzwerk mit über 30 Hochschulvereinen und Top-Employern.</p>
+                <p class="text-lg text-blue-200">Als ASF-Mitglied profitierst du vom gesamten BVH-Netzwerk mit über 70 Hochschulvereinen und 55 Partnern.</p>
             </div>
             
             <!-- Partner Logos Grid - EASY SWAP PLACEHOLDERS! -->
@@ -704,7 +719,7 @@
                     </div>
                     
                     <div class="flex items-center gap-4 pt-6 border-t border-white/20">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Crect fill='%23ddd' width='60' height='60'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='20'%3EMH%3C/text%3E%3C/svg%3E" alt="Speaker" class="w-14 h-14 rounded-full border-2 border-white/30">
+                        
                         <div><div class="font-bold">Dr. Moritz Hagen</div><div class="text-sm text-purple-200">Manager Organizational Development @ digatus</div></div>
                     </div>
                 </div>
@@ -877,7 +892,7 @@
         <div class="absolute inset-0 opacity-30"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-asf-navy/10 to-asf-purple/10 rounded-full blur-[100px]"></div></div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
             <!-- LOGO IM CTA AUCH ERSETZEN! -->
-            <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/image.png" alt="ASF Logo" class="w-20 h-20 mx-auto mb-8 object-contain">
+            <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/logo.png" alt="ASF Logo" class="w-20 h-20 mx-auto mb-8 object-contain">
             <h2 class="font-display text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bereit durchzustarten?</h2>
             <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Schließe dich 200+ ambitionierten Studierenden an.<br>Für nur <strong class="text-asf-navy">2 EUR pro Monat</strong>.</p>
             <button onclick="openModal('membershipModal')" class="btn-primary-new px-12 py-5 rounded-xl text-white font-bold text-xl inline-flex items-center gap-3 cursor-pointer"><i class="fas fa-arrow-right"></i> Jetzt Mitglied werden</button>
@@ -892,7 +907,7 @@
                 <div class="md:col-span-2">
                     <!-- FOOTER LOGO AUCH ERSETZEN! -->
                     <div class="flex items-center gap-3 mb-6">
-                        <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/image.png" alt="ASF" class="h-10 w-auto">
+                        <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/logo.png" alt="ASF" class="h-10 w-auto">
                         <span class="font-display font-bold text-xl">ASF e.V.</span>
                     </div>
                     <p class="text-gray-400 leading-relaxed max-w-md">Academic Society of Finance – Der Finance Club an deiner Hochschule. Von Studenten für Studenten.</p>
@@ -971,7 +986,7 @@
             <button onclick="closeModal('membershipModal')" class="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition" aria-label="Schließen"><i class="fas fa-times"></i></button>
             <div class="flex items-center gap-4 mb-4">
                 <!-- MODAL LOGO AUCH ERSETZEN! -->
-                <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/image.png" alt="ASF" class="w-12 h-12">
+                <img src="https://raw.githubusercontent.com/Enzeeeeeeeeee/ASF.github.io/main/logo.png" alt="ASF" class="w-12 h-12">
                 <div><h2 class="font-display text-2xl font-bold">Mitgliedsantrag</h2><p class="text-white/80 text-sm">Academic Society of Finance e.V.</p></div>
             </div>
             <div class="bg-white/10 rounded-xl p-4 inline-flex items-center gap-4"><div><div class="text-sm text-white/70">Beitragsmodell</div><div class="flex items-baseline gap-1"><span class="text-3xl font-bold">2</span><span class="text-lg">EUR</span><span class="text-white/70">/ Monat</span></div></div><div class="text-sm text-white/60 pl-4 border-l border-white/20">Monatsweise per SEPA-Lastschrift</div></div>
@@ -1021,7 +1036,7 @@
         document.querySelectorAll('.nav-link-light').forEach(link => {
             link.classList.remove('active');
             const linkText = link.textContent.toLowerCase();
-            if ((pageName === 'home' && (linkText.includes('home') || linkText.includes('über'))) ||
+            if ((pageName === 'home' && (linkText.includes('home'))) ||
                 (pageName === 'academy' && linkText.includes('academy'))) {
                 link.classList.add('active');
             }
